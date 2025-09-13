@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出産準備完全版チェックリスト</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: linear-gradient(135deg, #ffeef4 0%, #fff5f8 100%);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #ff6b9d, #ff8fa3);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 16px;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+
+        .summary-box {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff6b9d;
+        }
+
+        .cost-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cost-item {
+            background: linear-gradient(135deg, #f8f9ff, #fff);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e8ecff;
+        }
+
+        .cost-item h3 {
+            color: #5a67d8;
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+
+        .cost-item .amount {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .category-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .category-title {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: -20px -20px 15px -20px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .category-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .item-row {
+            display: grid;
+            grid-template-columns: 30px 1fr auto auto;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            align-items: center;
+        }
+
+        .item-row:last-child {
+            border-bottom: none;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .item-details {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.3;
+        }
+
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .status-required {
+            background: #ffe6e6;
+            color: #d63384;
+        }
+
+        .status-optional {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .status-skip {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #ff6b9d;
+            font-size: 14px;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+            color: #2d3436;
+        }
+
+        .tips-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tips-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .tips-list li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+
+        .tips-list li:last-child {
+            border-bottom: none;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .category-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>👶 出産準備完全版チェックリスト</h1>
+        <p>バリキャリママのための効率的な準備ガイド</p>
+    </div>
+
+    <div class="summary-box">
+        <h2 style="margin-top: 0; color: #ff6b9d;">💰 予算サマリー</h2>
+        <div class="cost-summary">
+            <div class="cost-item">
+                <h3>必需品</h3>
+                <div class="amount">¥90,000</div>
+            </div>
+            <div class="cost-item">
+                <h3>オプション</h3>
+                <div class="amount">¥35,000</div>
+            </div>
+            <div class="cost-item">
+                <h3>合計予算</h3>
+                <div class="amount">¥125,000</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🍼</span>
+            授乳用品
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">哺乳瓶（母乳実感、160ml×2本、乳首SSサイズ）</div>
+                <div class="item-details">BPA フリー、シリコーン製乳首、軽量で割れにくいプラスチックがおすすめ。まずは160mlのSSを２つ購入して、必要に応じて買い足すのがよいです。</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥11,300</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">哺乳瓶消毒器（Combi 除菌じょーず）</div>
+                <div class="item-details">ミルトン或いは電子レンジ消毒ケース。短時間で消毒できて、保管ケースにもなる除菌じょーずがおすすめ。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥1,900</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">哺乳瓶用スポンジ（母乳実感スポンジブラシ）</div>
+                <div class="item-details">独自の凸凹が哺乳瓶にフィットして、使いやすいです。哺乳瓶の底まで綺麗に洗えて、他の食器類を洗うスポンジと分けられて、衛生面も良し。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥550</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">粉ミルク（雪印ビーンスタークすこやかM1）</div>
+                <div class="item-details">病院で「すこやかM1」を使っていて、赤ちゃんも喜んでいたので継続して使ってます。コスパも良いし溶けやすいのでおすすめ♪　複数の会社からサンプルをもらって試用してから缶を買うのも良いですが、サンプルはすぐ使い切ってしまうので、出産前に缶を買っておけばよかったと後悔しました。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥10,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">授乳クッション（エルゴ　ナチュラルカーブ）</div>
+                <div class="item-details">母乳を頑張りたい人には必需品☆授乳時の高さを調整することで姿勢がラクに♪エルゴの授乳クッションはクッションの弾力が強く、ベルトでお腹に固定できるので使いやすいです♪</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥11,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ストローマグ（ビーボックス）</div>
+                <div class="item-details">6ヶ月頃から使用開始。個人的には、出産祝いかお古でもらう可能性もあるので、出産後に買うのが良いと思います。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥2,400</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おしゃぶり（ヌーク）</div>
+                <div class="item-details">ケース付き、まずは1個で試用。赤ちゃんの唇にぴったり吸い付く設計になっていて医療専門家にも推奨されているみたいです。ケース付きなので、外出時に持ち運びが楽です！</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥800</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">搾乳器</div>
+                <div class="item-details">必要に応じて購入。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥0</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">保存容器（iwaki パック＆レンジ 800ml×8個）</div>
+                <div class="item-details">セット販売ではなく、800mlを複数買うのがポイント！家事代行・作り置き料理をこれにいれて重ねれば冷蔵庫にすっきり収納できます。ガラス製容器なのでオーブン＆電子レンジ可で、プラスチック容器にはもう戻れない(°▽°)</div>
+            </div>
+            <div class="status-badge status-required">個人的に必需品</div>
+            <div class="price">¥6,300</div>
+        </div>
+    </div>
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">👕</span>
+            ベビー服
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">短肌着（新生児用）</div>
+                <div class="item-details">股下がないのでおむつ替えがラクチン。病院やお祝いで頂くこともあるので３枚程事前に購入するのがおすすめ。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥3,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">コンビ肌着</div>
+                <div class="item-details">スナップで止めるタイプが着せやすくておすすめ！４枚程。</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥6,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おくるみ/スワドル</div>
+                <div class="item-details">産後の退院時、睡眠時に使うので１枚事前にあると良いです。120cmサイズの巨大サイズが使い勝手がよくておすすめ☆出産祝いでもらうことも多いので買いすぎに注意⚠️</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥1,100</div>
+        </div>
+
+    </div>
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🧺</span>
+            おむつ・洗濯
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おむつ用ゴミ箱（コンビ　ポイテック）</div>
+                <div class="item-details">匂わないし、毎回小袋にいれる手間も省けて、なくてはならない存在♡　カーテン裏に置けば存在感もなし☆</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥14,400</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">紙おむつ（新生児用　テープ）</div>
+                <div class="item-details">事前に１パック購入。個人的には、安いものでOK！出産後にサンプルを試してから形が合う物を大容量買ったほうが良いです。</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥1,800</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おしりふき（ムーニー　やわらか厚手）</div>
+                <div class="item-details">おしりだけでなく、手や顔、体、何にでも使えます。水分量が多く、拭きやすい厚手がおすすめ！</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥4,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビー洗濯洗剤</div>
+                <div class="item-details">おしりだけでなく、手や顔、体、何にでも使えます。水分量が多く、拭きやすい厚手がおすすめ！</div>
+            </div>
+            <div class="status-badge status-optional">必需品</div>
+            <div class="price">¥4,000</div>
+        </div>
+
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🛏️</span>
+            家具・寝具
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーベッド（ファルスカ　ミニジョイントベッド　ネオ）</div>
+                <div class="item-details">ナチュラルなデザインでとてもかわいいです！部品も少なく、組立が簡単、高さ調整も可能、狭い寝室にも圧迫感なく置けます。ベビーマットレス「ファルスカ　コンパクトベッド」がぴったりはまるのでセット購入がおすすめ♪</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥12,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーマットレス（ファルスカ　コンパクトベッド　フィット）</div>
+                <div class="item-details">持ち運びもできるので、外出時や昼寝用ベッドとして便利。ベビーベッド「ファルスカ　ミニジョイントベッド　ネオ」にぴったりはまるのでセット購入がおすすめ♪</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥0</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">トイレ用ペットシーツ</div>
+                <div class="item-details">ベビーベッドのシーツの下にひくと、おしっこがベッドに漏れずに手入れが簡単になります。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥0</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ハイチェア</div>
+                <div class="item-details">6ヶ月頃から、安全基準適合、清拭しやすいもの。１ヶ月レンタルして試すのもあり。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥0</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おむつ替え台</div>
+                <div class="item-details">メルカリで購入予定、折りたたみ式</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥14,400</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーバウンサー（ベビージョルン）</div>
+                <div class="item-details">複数のママブロガー推奨。私は生後１ヶ月から使い始めたよ。赤ちゃんがバウンサーで遊んでる間に、家事ができたので助かってます！バウンサー用トーイの併用で、赤ちゃんの遊び時間が長くなるのでおすすめ。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥10,300</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">バウンサー用トーイ（ベビージョルン）</div>
+                <div class="item-details">バウンサーに装着すると、じーっと見つめたり、自分で手で触ったりして、赤ちゃんの遊び時間が長くなるのでおすすめ♪</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥15,800</div>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🚗</span>
+            お出かけ用品
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーカー（アップリカ　ルーチェフリー）</div>
+                <div class="item-details">折り畳んだ時のコンパクトさ、座面の高さ、収納容積の大きさが魅力で購入したのですが、これを選んで正解でした！振動や衝撃にも強くて押しやすく、あまり人と被りにくいのも気に入っているポイントです♪生活スタイルに合わせて出産後にゆっくり選んでも良いと思います。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥73,700</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">抱っこ紐（エルゴ　オムニブリーズ）</div>
+                <div class="item-details">高機能で、安心感のあるしっかりしたサポート、軽量で快適です☆</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥22,000</div>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🛁</span>
+            お風呂・ケア用品
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーソープ（泡タイプ）</div>
+                <div class="item-details">詰め替えもできるピジョン全身泡ソープを使ってます。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥1,000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビーオイル</div>
+                <div class="item-details">無香料のものを選んでね。私は産院で出産祝いとして頂いたので、急いで購入しなくてもよいかもしれないです。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥0</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビー用爪切りハサミ</div>
+                <div class="item-details">大人用爪切りでは危険なので、ベビー用を購入しましょう。電動爪やすりも人気ですが、私はこれで十分でした！</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥1000</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ガーゼハンカチ</div>
+                <div class="item-details">お風呂の際に顔や身体の汚れを拭き取るのに便利です☆</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥1,000</div>
+        </div>
+    </div>
+
+    <div class="category-section">
+        <div class="category-title">
+            <span class="category-icon">🩹</span>
+            救急箱・医療用品
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">鼻水吸引器（ピジョン　シュポット）</div>
+                <div class="item-details">高くても電動式推奨！短時間でしっかり吸ってくれるのでストレスなく使い勝手良いです。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥14,300</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">体温計（タニタ非接触型）</div>
+                <div class="item-details">額で測定する、非接触体温計なので、寝ている子どもや赤ちゃんの体温もはかりやすく、気に入っています。</div>
+            </div>
+            <div class="status-badge status-optional">オプション</div>
+            <div class="price">¥3,700</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビー用日焼け止め</div>
+                <div class="item-details">アロベビー製品、6ヶ月未満対応</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥670</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">おむつかぶれクリーム（ポリベビー）</div>
+                <div class="item-details">いずれ必要になる可能性が高いので、出産前に購入しておくと必要時に慌てなくてすみます！</div>
+            </div>
+            <div class="status-badge status-required">オプション</div>
+            <div class="price">¥700</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ワセリン</div>
+                <div class="item-details">保湿・保護用。いずれ必要になる可能性が高いので、出産前に購入しておくと必要時に慌てなくてすみます！</div>
+            </div>
+            <div class="status-badge status-required">オプション</div>
+            <div class="price">¥500</div>
+        </div>
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name">ベビー用綿棒</div>
+                <div class="item-details">沐浴後に耳や鼻、おへそを掃除するのに使います。大人用よりも先が小さい子供用を用意してね。</div>
+            </div>
+            <div class="status-badge status-required">オプション</div>
+            <div class="price">¥200</div>
+        </div>
