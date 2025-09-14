@@ -52,18 +52,19 @@
         }
 
         .cost-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
             margin-bottom: 20px;
         }
 
         .cost-item {
             background: linear-gradient(135deg, #f8f9ff, #fff);
-            padding: 15px;
+            padding: 15px 20px;
             border-radius: 10px;
             text-align: center;
             border: 2px solid #e8ecff;
+            flex: 1;
         }
 
         .cost-item h3 {
@@ -134,6 +135,17 @@
             font-weight: bold;
             color: #333;
             margin-bottom: 4px;
+        }
+
+        .item-name a {
+            color: #ff6b9d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .item-name a:hover {
+            color: #e55a8a;
+            text-decoration: underline;
         }
 
         .item-details {
@@ -241,15 +253,15 @@
         <div class="cost-summary">
             <div class="cost-item">
                 <h3>必需品</h3>
-                <div class="amount">¥90,000</div>
+                <div class="amount">¥123,400</div>
             </div>
             <div class="cost-item">
                 <h3>オプション</h3>
-                <div class="amount">¥35,000</div>
+                <div class="amount">¥168,400</div>
             </div>
             <div class="cost-item">
                 <h3>合計予算</h3>
-                <div class="amount">¥125,000</div>
+                <div class="amount">¥298,800</div>
             </div>
         </div>
     </div>
@@ -262,85 +274,77 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">哺乳瓶（母乳実感、160ml×2本、乳首SSサイズ）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336867017162" target="_blank">哺乳瓶（母乳実感、160ml×2本、乳首SSサイズ）</a></div>
                 <div class="item-details">BPA フリー、シリコーン製乳首、軽量で割れにくいプラスチックがおすすめ。まずは160mlのSSを２つ購入して、必要に応じて買い足すのがよいです。</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
-            <div class="price">¥11,300</div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥7,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">哺乳瓶消毒器（Combi 除菌じょーず）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336860456116" target="_blank">哺乳瓶消毒器（Combi 除菌じょーず）</a></div>
                 <div class="item-details">ミルトン或いは電子レンジ消毒ケース。短時間で消毒できて、保管ケースにもなる除菌じょーずがおすすめ。</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥1,900</div>
+            <div class="price">¥2,500</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">哺乳瓶用スポンジ（母乳実感スポンジブラシ）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336870107421" target="_blank">哺乳瓶用スポンジ（母乳実感スポンジブラシ）</a></div>
                 <div class="item-details">独自の凸凹が哺乳瓶にフィットして、使いやすいです。哺乳瓶の底まで綺麗に洗えて、他の食器類を洗うスポンジと分けられて、衛生面も良し。</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥550</div>
+            <div class="price">¥700</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">粉ミルク（雪印ビーンスタークすこやかM1）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336877007112" target="_blank">粉ミルク（雪印ビーンスタークすこやかM1）</a></div>
                 <div class="item-details">病院で「すこやかM1」を使っていて、赤ちゃんも喜んでいたので継続して使ってます。コスパも良いし溶けやすいのでおすすめ♪　複数の会社からサンプルをもらって試用してから缶を買うのも良いですが、サンプルはすぐ使い切ってしまうので、出産前に缶を買っておけばよかったと後悔しました。</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥10,000</div>
+            <div class="price">¥11,400</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">授乳クッション（エルゴ　ナチュラルカーブ）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336950891258" target="_blank">授乳クッション（エルゴ　ナチュラルカーブ）</a></div>
                 <div class="item-details">母乳を頑張りたい人には必需品☆授乳時の高さを調整することで姿勢がラクに♪エルゴの授乳クッションはクッションの弾力が強く、ベルトでお腹に固定できるので使いやすいです♪</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
+            <div class="status-badge status-required">必需品</div>
             <div class="price">¥11,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ストローマグ（ビーボックス）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336882411550" target="_blank">ストローマグ（ビーボックス）</a></div>
                 <div class="item-details">6ヶ月頃から使用開始。個人的には、出産祝いかお古でもらう可能性もあるので、出産後に買うのが良いと思います。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥2,400</div>
+            <div class="price">¥2,500</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">おしゃぶり（ヌーク）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336883989371" target="_blank">おしゃぶり（ヌーク）</a></div>
                 <div class="item-details">ケース付き、まずは1個で試用。赤ちゃんの唇にぴったり吸い付く設計になっていて医療専門家にも推奨されているみたいです。ケース付きなので、外出時に持ち運びが楽です！</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥800</div>
+            <div class="price">¥1,100</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">搾乳器</div>
-                <div class="item-details">必要に応じて購入。</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336899993347" target="_blank">保存容器（iwaki パック＆レンジ 800ml×8個）</a></div>
+                <div class="item-details">セット販売ではなく、800mlを複数買うのがポイント！家事代行・作り置き料理をこれにいれて重ねれば冷蔵庫にすっきり収納できます。ガラス製容器なのでオーブン＆電子レンジ可で、プラスチック容器にはもう戻れない(°▽°)　８つ購入しました！私にとっては必需品！</div>
             </div>
-            <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥0</div>
-        </div>
-        <div class="item-row">
-            <div class="checkbox">☐</div>
-            <div class="item-info">
-                <div class="item-name">保存容器（iwaki パック＆レンジ 800ml×8個）</div>
-                <div class="item-details">セット販売ではなく、800mlを複数買うのがポイント！家事代行・作り置き料理をこれにいれて重ねれば冷蔵庫にすっきり収納できます。ガラス製容器なのでオーブン＆電子レンジ可で、プラスチック容器にはもう戻れない(°▽°)</div>
-            </div>
-            <div class="status-badge status-required">個人的に必需品</div>
-            <div class="price">¥6,300</div>
+            <div class="status-badge status-required">オプション</div>
+            <div class="price">¥15,000</div>
         </div>
     </div>
+
     <div class="category-section">
         <div class="category-title">
             <span class="category-icon">👕</span>
@@ -361,20 +365,29 @@
                 <div class="item-name">コンビ肌着</div>
                 <div class="item-details">スナップで止めるタイプが着せやすくておすすめ！４枚程。</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
+            <div class="status-badge status-required">必需品</div>
             <div class="price">¥6,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">おくるみ/スワドル</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336947813236" target="_blank">おくるみ/スワドル</a></div>
                 <div class="item-details">産後の退院時、睡眠時に使うので１枚事前にあると良いです。120cmサイズの巨大サイズが使い勝手がよくておすすめ☆出産祝いでもらうことも多いので買いすぎに注意⚠️</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
+            <div class="status-badge status-required">必需品</div>
             <div class="price">¥1,100</div>
         </div>
-
+        <div class="item-row">
+            <div class="checkbox">☐</div>
+            <div class="item-info">
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336892584282" target="_blank">スタイ（ベビージョルン）</a></div>
+                <div class="item-details">何でもキャッチしてくれて、デザインも良し！私が見学したほとんどの保育園で、このスタイを使っていました。</div>
+            </div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥3,000</div>
+        </div>
     </div>
+
     <div class="category-section">
         <div class="category-title">
             <span class="category-icon">🧺</span>
@@ -383,40 +396,39 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">おむつ用ゴミ箱（コンビ　ポイテック）</div>
-                <div class="item-details">匂わないし、毎回小袋にいれる手間も省けて、なくてはならない存在♡　カーテン裏に置けば存在感もなし☆</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336918033157" target="_blank">おむつ用ゴミ箱（コンビ　ポイテック）</a></div>
+                <div class="item-details">匂わないし、毎回小袋にいれる手間も省けて、なくてはならない存在♡　カーテン裏に置けば存在感もなし☆個人的に必需品！</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥14,400</div>
+            <div class="price">¥8,600</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">紙おむつ（新生児用　テープ）</div>
-                <div class="item-details">事前に１パック購入。個人的には、安いものでOK！出産後にサンプルを試してから形が合う物を大容量買ったほうが良いです。</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700337100885381" target="_blank">紙おむつ（新生児用　テープ）</a></div>
+                <div class="item-details">事前に１パックは購入すべし。個人的には、安いものでOK！出産後にサンプルを試してから形が合う物を大容量に買ったほうが良いです。</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
-            <div class="price">¥1,800</div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥7,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">おしりふき（ムーニー　やわらか厚手）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336949033403" target="_blank">おしりふき（ムーニー　やわらか厚手）</a></div>
                 <div class="item-details">おしりだけでなく、手や顔、体、何にでも使えます。水分量が多く、拭きやすい厚手がおすすめ！</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
+            <div class="status-badge status-required">必需品</div>
             <div class="price">¥4,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビー洗濯洗剤</div>
-                <div class="item-details">おしりだけでなく、手や顔、体、何にでも使えます。水分量が多く、拭きやすい厚手がおすすめ！</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700337103302147" target="_blank">ベビー洗濯洗剤（ピジョン　無添加ピュア）</a></div>
+                <div class="item-details">赤ちゃんの肌に優しい成分で作られた専用洗剤。肌トラブルを防ぎ、安心して使えます。</div>
             </div>
-            <div class="status-badge status-optional">必需品</div>
-            <div class="price">¥4,000</div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥700</div>
         </div>
-
     </div>
 
     <div class="category-section">
@@ -427,34 +439,34 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビーベッド（ファルスカ　ミニジョイントベッド　ネオ）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336904424320" target="_blank">ベビーベッド（ファルスカ　ミニジョイントベッド　ネオ）</a></div>
                 <div class="item-details">ナチュラルなデザインでとてもかわいいです！部品も少なく、組立が簡単、高さ調整も可能、狭い寝室にも圧迫感なく置けます。ベビーマットレス「ファルスカ　コンパクトベッド」がぴったりはまるのでセット購入がおすすめ♪</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥12,000</div>
+            <div class="price">¥22,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビーマットレス（ファルスカ　コンパクトベッド　フィット）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336905037377" target="_blank">ベビーマットレス（ファルスカ　コンパクトベッド　フィット）</a></div>
                 <div class="item-details">持ち運びもできるので、外出時や昼寝用ベッドとして便利。ベビーベッド「ファルスカ　ミニジョイントベッド　ネオ」にぴったりはまるのでセット購入がおすすめ♪</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥0</div>
+            <div class="price">¥20,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">トイレ用ペットシーツ</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336952118349" target="_blank">トイレ用ペットシーツ</a></div>
                 <div class="item-details">ベビーベッドのシーツの下にひくと、おしっこがベッドに漏れずに手入れが簡単になります。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥0</div>
+            <div class="price">¥4,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ハイチェア</div>
+                <div class="item-name">ハイローチェア</div>
                 <div class="item-details">6ヶ月頃から、安全基準適合、清拭しやすいもの。１ヶ月レンタルして試すのもあり。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
@@ -463,29 +475,29 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">おむつ替え台</div>
-                <div class="item-details">メルカリで購入予定、折りたたみ式</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/items" target="_blank">おむつ替え台</a></div>
+                <div class="item-details">折りたたみ式で収納も便利。腰への負担を軽減し、衛生的におむつ替えができます。</div>
             </div>
-            <div class="status-badge status-required">必需品</div>
+            <div class="status-badge status-required">個人的必需品</div>
             <div class="price">¥14,400</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビーバウンサー（ベビージョルン）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336922796206" target="_blank">ベビーバウンサー（ベビージョルン）</a></div>
                 <div class="item-details">複数のママブロガー推奨。私は生後１ヶ月から使い始めたよ。赤ちゃんがバウンサーで遊んでる間に、家事ができたので助かってます！バウンサー用トーイの併用で、赤ちゃんの遊び時間が長くなるのでおすすめ。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥10,300</div>
+            <div class="price">¥19,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">バウンサー用トーイ（ベビージョルン）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336923027724" target="_blank">バウンサー用トーイ（ベビージョルン）</a></div>
                 <div class="item-details">バウンサーに装着すると、じーっと見つめたり、自分で手で触ったりして、赤ちゃんの遊び時間が長くなるのでおすすめ♪</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥15,800</div>
+            <div class="price">¥7,500</div>
         </div>
     </div>
 
@@ -497,16 +509,16 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビーカー（アップリカ　ルーチェフリー）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336925411235" target="_blank">ベビーカー（アップリカ　ルーチェフリー）</a></div>
                 <div class="item-details">折り畳んだ時のコンパクトさ、座面の高さ、収納容積の大きさが魅力で購入したのですが、これを選んで正解でした！振動や衝撃にも強くて押しやすく、あまり人と被りにくいのも気に入っているポイントです♪生活スタイルに合わせて出産後にゆっくり選んでも良いと思います。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥73,700</div>
+            <div class="price">¥74,800</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">抱っこ紐（エルゴ　オムニブリーズ）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336926982301" target="_blank">抱っこ紐（エルゴ　オムニブリーズ）</a></div>
                 <div class="item-details">高機能で、安心感のあるしっかりしたサポート、軽量で快適です☆</div>
             </div>
             <div class="status-badge status-required">必需品</div>
@@ -534,22 +546,22 @@
                 <div class="item-name">ベビーオイル</div>
                 <div class="item-details">無香料のものを選んでね。私は産院で出産祝いとして頂いたので、急いで購入しなくてもよいかもしれないです。</div>
             </div>
-            <div class="status-badge status-optional">オプション</div>
-            <div class="price">¥0</div>
+            <div class="status-badge status-required">必需品</div>
+            <div class="price">¥1,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビー用爪切りハサミ</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336929949328" target="_blank">ベビー用爪切りハサミ</a></div>
                 <div class="item-details">大人用爪切りでは危険なので、ベビー用を購入しましょう。電動爪やすりも人気ですが、私はこれで十分でした！</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥1000</div>
+            <div class="price">¥1,000</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ガーゼハンカチ</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336936124137" target="_blank">ガーゼハンカチ</a></div>
                 <div class="item-details">お風呂の際に顔や身体の汚れを拭き取るのに便利です☆</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
@@ -565,8 +577,8 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">鼻水吸引器（ピジョン　シュポット）</div>
-                <div class="item-details">高くても電動式推奨！短時間でしっかり吸ってくれるのでストレスなく使い勝手良いです。</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336952897112" target="_blank">鼻水吸引器（ピジョン　シュポット）</a></div>
+                <div class="item-details">電動式推奨！短時間でしっかり吸ってくれるのでストレスなく使い勝手良いです。</div>
             </div>
             <div class="status-badge status-required">必需品</div>
             <div class="price">¥14,300</div>
@@ -574,7 +586,7 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">体温計（タニタ非接触型）</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700336953587119" target="_blank">体温計（タニタ非接触型）</a></div>
                 <div class="item-details">額で測定する、非接触体温計なので、寝ている子どもや赤ちゃんの体温もはかりやすく、気に入っています。</div>
             </div>
             <div class="status-badge status-optional">オプション</div>
@@ -583,11 +595,11 @@
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
-                <div class="item-name">ベビー用日焼け止め</div>
-                <div class="item-details">アロベビー製品、6ヶ月未満対応</div>
+                <div class="item-name"><a href="https://room.rakuten.co.jp/working.mama.life/1700337106071220" target="_blank">ベビー用日焼け止め（アロベビー）</a></div>
+                <div class="item-details">スプレータイプはすごく楽！！無添加だから安心して使えるし、おすすめです！</div>
             </div>
             <div class="status-badge status-required">必需品</div>
-            <div class="price">¥670</div>
+            <div class="price">¥2,600</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
@@ -595,16 +607,16 @@
                 <div class="item-name">おむつかぶれクリーム（ポリベビー）</div>
                 <div class="item-details">いずれ必要になる可能性が高いので、出産前に購入しておくと必要時に慌てなくてすみます！</div>
             </div>
-            <div class="status-badge status-required">オプション</div>
+            <div class="status-badge status-optional">オプション</div>
             <div class="price">¥700</div>
         </div>
         <div class="item-row">
             <div class="checkbox">☐</div>
             <div class="item-info">
                 <div class="item-name">ワセリン</div>
-                <div class="item-details">保湿・保護用。いずれ必要になる可能性が高いので、出産前に購入しておくと必要時に慌てなくてすみます！</div>
+                <div class="item-details">保湿・保護用。出産前に購入しておくと必要時に慌てなくてすみます！</div>
             </div>
-            <div class="status-badge status-required">オプション</div>
+            <div class="status-badge status-optional">オプション</div>
             <div class="price">¥500</div>
         </div>
         <div class="item-row">
@@ -613,6 +625,29 @@
                 <div class="item-name">ベビー用綿棒</div>
                 <div class="item-details">沐浴後に耳や鼻、おへそを掃除するのに使います。大人用よりも先が小さい子供用を用意してね。</div>
             </div>
-            <div class="status-badge status-required">オプション</div>
+            <div class="status-badge status-optional">オプション</div>
             <div class="price">¥200</div>
         </div>
+    </div>
+
+    <div class="tips-section">
+        <div class="tips-title">
+            <span style="margin-right: 10px;">💡</span>
+            バリキャリママの準備のコツ
+        </div>
+        <ul class="tips-list">
+            <li>狭い50平米のマンションでは、収納を最優先に考えて購入計画を立てる</li>
+            <li>友人からのお古を活用することで、初期費用を大幅に削減可能</li>
+            <li>大型家具は配置場所を事前に測定・確認してから購入する</li>
+            <li>出産直後に本当に必要なものだけを厳選購入し、様子を見ながら追加する</li>
+            <li>病院で粉ミルクのサンプルを試してから、赤ちゃんに合うブランドを選ぶ</li>
+            <li>働くママの時間は貴重なので、オンラインショッピングと宅配サービスを最大活用</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p style="color: #666; font-size: 14px;">バリキャリママの効率的な出産準備ガイド</p>
+        <p style="color: #999; font-size: 12px; margin-top: 10px;">商品名をクリックして楽天Roomで詳細をチェック！</p>
+    </div>
+</body>
+</html>
